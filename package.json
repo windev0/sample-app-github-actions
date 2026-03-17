@@ -1,0 +1,20 @@
+{
+  "name": "sample-app-github-actions",
+  "version": "1.0.0",
+  "description": "This is a sample project to set up github actions :)",
+  "homepage": "https://github.com/windev0/sample-app-github-actions#readme",
+  "bugs": {
+    "url": "https://github.com/windev0/sample-app-github-actions/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/windev0/sample-app-github-actions.git"
+  },
+  "license": "ISC",
+  "author": "Winner AWOUNO",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
