@@ -23,6 +23,12 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: build/ # Adjust the path to your build artifacts
   test:
     needs: build # This job depends on the build job
     runs-on: ubuntu-latest
@@ -32,3 +38,14 @@ jobs:
 
       - name: Run tests
         run: npm test
+  deploy:
+    if: github.ref == 'refs/heads/main' # Only run this job on the main branch
+    needs: test # This job depends on the test job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to production
+        run: echo "Deploying to production..." # Replace with actual deployment commands
+
