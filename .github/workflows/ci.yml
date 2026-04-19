@@ -1,4 +1,4 @@
-name: CI
+name: Build and Test
 
 on: # Trigger the workflow on push or pull request to the main branch or any feature branch
   push:
@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build-artifacts
-          path: build/ # Adjust the path to your build artifacts
+          path: build/ 
   test:
     needs: build # This job depends on the build job
     runs-on: ubuntu-latest
