@@ -5,6 +5,9 @@ on: # Trigger the workflow on push or pull request to the main branch or any fea
     branches: [ main, feature/* ]
   pull_request:
     branches: [ main ]
+  schedule:
+    # Runs every 5 minutes at sunday
+    - cron: "/5 0 * * 0"
 
 jobs:
   build:
